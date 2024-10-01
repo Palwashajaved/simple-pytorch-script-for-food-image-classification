@@ -11,7 +11,6 @@ This project implements a fruit classification model using PyTorch. The model is
 - [Training the Model](#training-the-model)
 - [Inference](#inference)
 - [Results](#results)
-- [License](#license)
 
 ## Overview
 
@@ -59,10 +58,29 @@ Make sure you have the following libraries installed:
 - matplotlib
 
 You can install the required libraries using pip:
-```bash
+
 pip install torch torchvision matplotlib
 
-#Results
-The model is capable of accurately classifying fruit images based on the training dataset. The results can be evaluated using validation accuracy metrics, which are printed during the training process.
+## Training the Model
+To train the model, run:
 
+python train.py
+
+This will:
+
+Load the dataset.
+
+Train the model for a specified number of epochs.
+
+Save the best model weights as best_fruits_model.pth.
+
+## Inference
+To classify a new fruit image, update the image_path variable in classify.py with the path to your image and run:
+
+python classify.py
+
+This will display the image along with the predicted class.
+
+## Results
+The model is capable of accurately classifying fruit images based on the training dataset. The results can be evaluated using validation accuracy metrics, which are printed during the training process.
 
